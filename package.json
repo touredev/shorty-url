@@ -7,6 +7,12 @@
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
+  "keywords": [
+    "url",
+    "shortener",
+    "heroku"
+  ],
+  "author": "bob <touremjean@gmail.com>",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
@@ -15,5 +21,8 @@
     "monk": "^7.3.0",
     "morgan": "^1.10.0",
     "yup": "^0.29.1"
+  },
+  "engines": {
+    "node": "10.x"
   }
 }
