@@ -14,7 +14,43 @@
     <header class="section has-text-centered">
       <h1 class="title">Shorty Url - Your url shortener app</h1>
     </header>
+    <main id="app" class="section" style="width: 60%">
+      <div class="container" style="margin-left: 20%">
+        <div class="columns is-centered is-mobile" style="display: flex; flex-direction: column">
+          <div class="column">
+            <form @submit.prevent="createUrl()">
+              <div class="field">
+                <label for="url" class="label">Url</label>
+                <div class="control">
+                  <input type="text" id="url" name="url" v-model="url" class="input">
+                </div>
+              </div>
+              <div class="field">
+                <label for="slug" class="label">Slug</label>
+                <div class="control">
+                  <input type="text" id="slug" name="slug" v-model="slug" class="input">
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <button type="submit" class="button is-link is-medium">Create</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="column is-mobile">
+            <pre class="section">
+                  {{JSON.stringify(created, null, 2)}}
+            </pre>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>
