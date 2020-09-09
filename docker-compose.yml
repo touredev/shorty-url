@@ -4,12 +4,10 @@ services:
     container_name: docker-shorty-url
     build: .
     ports:
-      — "8080:8080"
+      - "1337:8080"
     depends_on:
-      — mongo
+      - mongo
     environment:
       MONGODB_URI: mongodb://mongo:27017/shortyurldb
   mongo:
     image: mongo
-    ports:
-      — "27017:27017"
